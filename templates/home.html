@@ -1,0 +1,54 @@
+{% extends "layout.html" %}
+
+{% block content %}
+<!--Showcase-->
+<header class="showcase">
+    <h2>Últimas Noticias</h2>
+    <p>¡¡¡Ya fue publicado mi primer trabajo internacional para la Academia de Idiomas "Speak Language Center"!!!</p>
+    <a href="https://www.youtube.com/watch?v=4v7pkfCkJZ4" class="btn" target="_blank">Escuchalo Acá <i class="fas fa-angle-double-right"></i></a>
+</header>
+
+<!--NEWS CARDS-->
+<div class="news-cards">
+    <div>
+        <img src="{{ url_for('static', filename='img/SobreMi.jpg') }}" alt"">
+        <h3>Sobre Mi</h3>
+        <p>Historial, Formación, habilidades y demás cosas</p>
+        <a href="{{url_for('about') }}">Conoceme!!!<i class="fas fa-angle-double-right"></i></a>
+    </div>
+    <div>
+        <img src="{{ url_for('static', filename='img/MisProyectos.jpg') }}" alt"">
+        <h3>Mis Proyectos</h3>
+        <p>Tengo un amplio abanico de proyectos musicales que abarcan diferentes géneros musicales como ser Rock, Pop,
+            Música Acústica, Tango, Musica Clásica, Música Popular, Folklore. De algunos hay
+            grabaciones subidas a internet pero de todos podemos brindar Shows Musicales de acuerdo a su gusto y
+            necesidad</p>
+        <a href="{{url_for('misproyectos') }}">Descubrilos, escucha y contratanos para tu evento!!!<i class="fas fa-angle-double-right"></i></a>
+    </div>
+    <div>
+        <img src="{{ url_for('static', filename='img/ServiciosSonorosMusicales.jpg') }}" alt"">
+        <h3>Servicios Sonoros Musicales</h3>
+        <p>Brindo diferentes trabajos tanto virtuales para cualquier parte del mundo o presenciales para Esperanza,
+            Santa Fe y alrededores por encargo.</p>
+        <a href="{{url_for('serviciossonorosmusicales') }}">Enterate de cuales y consultá sin compromiso!!!<i class="fas fa-angle-double-right"></i></a>
+    </div>
+
+    <div>
+        <img src="{{ url_for('static', filename='img/TrabajosRealizados.jpg') }}" alt">
+        <h3>Mis trabajos realizados</h3>
+        <p>Tengo trabajos de composición, grabación, mezcla, mastering, sonido en vivo, etc. </p>
+        <a href="{{url_for('trabajosrealizados') }}">Mira todos los trabajos!!<i class="fas fa-angle-double-right"></i></a>
+    </div>
+</div>
+
+<!--Banner-->
+<section class="cards-banner-one">
+    <div class="content">
+        <h2>Fechas A Futuro</h2>
+        <p>- 29/04 con la Orquesta Filarmónica Aarón Castellanos en el Club Aarón Castellanos</p>
+        <a href="{{url_for('fechasafuturo') }}" class="btn">Más Información<i class="fas fa-angle-double-right"></i></a>
+    </div>
+</section>
+
+
+{% endblock %}

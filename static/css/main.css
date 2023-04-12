@@ -1,0 +1,559 @@
+/* Estilo para todo el body */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+    margin: 0;
+    padding: 0;
+    background: black;
+    color: white;
+    background-color: #13130e;
+    /*background-image:*/
+        /*url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='4' height='4' viewBox='0 0 4 4'%3E%3Cpath fill='%23000000' fill-opacity='1' d='M1 3h1v1H1V3zm2-2h1v1H3V1z'%3E%3C/path%3E%3C/svg%3E");
+ */
+}
+
+a {
+    color: white;
+    text-decoration: none;
+}
+
+ul {
+    list-style: none;
+}
+
+.container {
+    width: 90%;
+    margin: auto;
+}
+
+/* Estilo para el botón del menú */
+.menu-btn {
+    position: absolute;
+    cursor: pointer;
+    top: 15px;
+    right: 30px;
+    z-index: 2;
+    font-size: 1.5rem;
+    display: none;
+}
+
+/* Estilo para el icono de barras del menú */
+.menu-btn .fas {
+    font-size: 24px;
+}
+
+/* Estilo para el contenedor principal */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Estilo para la barra de navegación principal */
+.nav-main {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0;
+}
+
+/* Estilo para el logotipo de la barra de navegación */
+.nav-brand {
+    height: 60px;
+}
+
+/* Estilo para los elementos de menú de navegación */
+.nav-menu {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+/* Estilo para los elementos principales de menú de navegación */
+.nav-menu>li {
+    position: relative;
+}
+
+/* Estilo para los enlaces del menú de navegación */
+.nav-menu a {
+    display: block;
+    padding: 10px;
+    text-decoration: none;
+    color: #eaf91f;
+}
+
+/* Estilo para los enlaces del menú de navegación cuando se pasan por encima */
+.nav-menu a:hover {
+    text-decoration: underline;
+    color: #eaf91f;
+    padding-bottom: 5px;
+}
+
+/* Estilo para los elementos secundarios del menú de navegación */
+.nav-menu ul {
+    display: none;
+    background: black;
+    opacity: 1;
+}
+
+.nav-menu li {
+    position: relative;
+}
+
+.nav-menu li:hover ul {
+    display: block;
+}
+
+.nav-menu li ul {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+/* Estilo para los elementos de menú de navegación de la derecha */
+.nav-menu-right {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+/*Navegación Alternativa*/
+.alternativa {
+    display: none;
+}
+
+
+/* SHOWCASE */
+hr {
+    margin: 10px;
+}
+
+.nav-menu li {
+    position: relative;
+}
+
+.nav-menu li:hover ul {
+    display: block;
+}
+
+.nav-menu li ul {
+    position: absolute;
+    top: 100%;
+    left: 0;
+}
+
+.showcase {
+    width: 100%;
+    height: 550px;
+    background: url("{{ url_for('static', filename='img/SonidoEnVivo.jpg') }}") no-repeat center center/cover;
+    padding: 50px;
+    padding: 50px;
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+    color: rgb(231, 212, 230);
+}
+
+.btn {
+    cursor: pointer;
+    display: inline-block;
+    border: 0;
+    font-weight: bold;
+    padding: 10px 20px;
+    background: #262626;
+    color: white;
+    font-size: 15px;
+    border: 1px solid white;
+    margin: 10px 0px;
+}
+
+.btn:hover {
+    opacity: .9;
+}
+
+.showcase h2,
+.showcase p {
+    margin-bottom: 10px;
+}
+
+/* News Cads */
+.news-cards {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 25px;
+    margin: 10px 0;
+}
+
+.news-cards img {
+    display: block;
+    /* Para asegurar que la imagen tenga márgenes */
+    max-width: 100%;
+    /* Para asegurarse de que la imagen no se extienda más allá de su contenedor */
+    height: 180px auto;
+    /* Para mantener la proporción de aspecto de la imagen */
+    margin: 0 auto;
+    /* Para centrar la imagen horizontalmente */
+    border: 5px solid white;
+    /* Para agregar un borde blanco de 5 píxeles */
+    object-fit: cover;
+    /* Para asegurarse de que la imagen se adapte al tamaño del contenedor, manteniendo su proporción de aspecto */
+    background-color: #f7f7f7;
+    /* Para agregar un color de fondo en caso de que la imagen se ajuste al contenedor, manteniendo su proporción de aspecto */
+}
+
+
+.news-cards h3 {
+    font-size: 20px;
+    margin: 10px 0;
+}
+
+.news-cards a {
+    padding: 10px 0;
+    color: #f2f2f2;
+    text-transform: uppercase;
+    display: inline-block;
+    font-weight: bold;
+}
+
+.news-cards a:hover {
+    text-decoration: underline;
+}
+
+/* CARDS BANNER ONE */
+.cards-banner-one {
+    width: 100%;
+    background: url("/img/Naturaleza.jpg") no-repeat center center/cover;
+    margin-bottom: 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.cards-banner-one .content {
+    width: 100%;
+    padding: 90px 0 0 30px;
+    color: #ffffff;
+}
+
+.cards-banner-one p,
+.cards-banner-one h2 {
+    margin: 10px 0 20px 0;
+}
+
+/* CARDS BANNER TWO */
+.cards-banner-two {
+    width: 100%;
+    height: 350px;
+    background: url('img/Naturaleza.jpg') no-repeat center center/cover;
+}
+
+.cards-banner-two .content {
+    width: 100%;
+    padding: 90px 0 0 30px;
+    color: #ffffff;
+}
+
+/*TEXTO CON SANGRÍA*/
+.textocomun {
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+.textoconsangria {
+    text-indent: 20px;
+}
+
+.aalternativoparatextocomun {
+    color: rgb(95, 95, 246);
+}
+
+.aalternativoparatextocomun:hover {
+    text-decoration: underline;
+}
+
+/*WHATSAPP*/
+.whatsappext {
+    color: green;
+}
+
+.whatsappext:hover {
+    text-decoration: underline;
+}
+
+/*IMAGENES VARIAS*/
+.imagenesvarias {
+    display: block;
+    /* Para asegurar que la imagen tenga márgenes */
+    max-width: 300px;
+    /* Para asegurarse de que la imagen no se extienda más allá de su contenedor */
+    height: 180px auto;
+    /* Para mantener la proporción de aspecto de la imagen */
+    margin: 0 auto;
+    /* Para centrar la imagen horizontalmente */
+    border: 5px solid white;
+    /* Para agregar un borde blanco de 5 píxeles */
+    object-fit: cover;
+    /* Para asegurarse de que la imagen se adapte al tamaño del contenedor, manteniendo su proporción de aspecto */
+    background-color: #f7f7f7;
+    /* Para agregar un color de fondo en caso de que la imagen se ajuste al contenedor, manteniendo su proporción de aspecto */
+}
+
+/*Portada Cuarteto*/
+.portadacuarteto {
+    display: block;
+    max-width: 800px;
+    width: 100%;
+    height: auto;
+    margin: 0 auto;
+    border: 5px solid white;
+    object-fit: cover;
+    background-color: #f7f7f7;
+
+}
+
+/*TRABAJOS REALIZADOS*/
+.trabajosrealizados {
+    font-size: 28px;
+    font-weight: bold;
+    text-decoration: underline;
+    text-align: left;
+    margin-bottom: 20px;
+}
+
+.trabajosrealizadoslista {
+    list-style-type: none;
+    margin: 5px;
+    padding: 0;
+    font-size: 18px;
+    text-align: left;
+}
+
+.trabajosrealizadoslista li:before {
+    content: "\2022";
+    margin-right: 10px;
+}
+
+.trabajosrealizadoslista li {
+    font-size: 16px;
+    line-height: 1.5;
+    margin-bottom: 10px;
+    display: flex;
+    align-items: flex-start;
+}
+
+
+.trabajosrealizadoslista a {
+    margin-top: 5px;
+    display: block;
+    text-align: center;
+    font-size: 12px;
+    margin-left: 10px;
+}
+
+
+.trabajosrealizadoslista a:hover {
+    color: white;
+    text-decoration: underline;
+}
+
+.fechasafuturolista li {
+    font-size: 16px;
+    line-height: 1.5;
+    margin-bottom: 10px;
+    display: block;
+    align-items: flex-start;
+
+}
+
+
+/*Aclaración*/
+.aclaracionizq {
+    font-size: 10px;
+    text-align: right;
+}
+
+/* Social */
+.social {
+    margin: 50px;
+}
+
+.social p {
+    text-align: center;
+    font-size: 30px;
+    margin-bottom: 20px;
+}
+
+.linktreee {
+    display: block;
+    margin: 0 auto;
+    text-align: center;
+    justify-content: center;
+    font-size: 30px;
+    margin-bottom: 20px;
+}
+
+.links {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.links a {
+    margin: 0 30px;
+}
+
+.links a i {
+    font-size: 3rem;
+}
+
+
+/* Social Grupos*/
+.socialgrupos {
+    margin: 10px;
+}
+
+.linksgrupos {
+    display: flex;
+    align-items: left;
+    justify-content: left;
+}
+
+.linksgrupos a {
+    margin: 0 30px;
+}
+
+.linksgrupos a i {
+    font-size: 26px;
+}
+
+/*Footer*/
+.footer {
+    background: #2f3640;
+    color: #616161;
+    font-size: 12px;
+    padding: 20px 0;
+    text-align: center;
+    padding-bottom: 20px;
+}
+
+@media (max-width: 700px) {
+
+    /*Navegación Alternativa*/
+    .nav-main {
+        display: none;
+    }
+
+    .alternativa {
+        display: block;
+    }
+
+    .footer-links {
+        background: #2f3640;
+        color: #616161;
+        font-size: 12px;
+        padding: 35px 0;
+    }
+
+    .footer-container {
+        display: grid;
+        justify-items: start;
+        flex-direction: row;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 10px;
+        justify-content: center;
+        align-items: flex-start;
+
+    }
+
+    .footer-container ul {
+        margin: 0 auto;
+        border: black;
+    }
+
+    .footer-container ul li {
+        line-height: 2.8;
+        justify-content: left;
+        text-align: left;
+    }
+
+    /*NewsCards*/
+    .news-cards {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .news-cards img {
+        height: 270px;
+    }
+
+    /*Links*/
+    .links {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        margin: 10px;
+        justify-content: center;
+    }
+
+    .links ul {
+        margin: 5px;
+        justify-content: center;
+    }
+
+    .links ul li {
+        justify-content: center;
+    }
+
+    @media (max-width: 500px) {
+
+        /*Menú Alternativo*/
+        .footer-container {
+            grid-template-columns: 1fr;
+        }
+
+        /*News Cards*/
+        .news-cards {
+            grid-template-columns: 1fr;
+        }
+
+        .news-cards img {
+            height: 270px;
+        }
+
+        .cards-banner-one .content,
+        .cards-banner-two .content {
+            width: 100%;
+            padding: 60px 20px,
+        }
+
+        .footer-links .footer-container {
+            grid-template-columns: 1fr;
+        }
+
+        .links {
+            display: grid;
+            grid-template-columns: 1fr;
+            margin: 10px;
+            justify-content: center;
+        }
+
+        .links ul {
+            margin: 5px;
+            justify-content: center;
+        }
+
+        .links ul li {
+            justify-content: center;
+        }
+    }
+
+}

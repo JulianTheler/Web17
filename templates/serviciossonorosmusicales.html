@@ -1,0 +1,43 @@
+{% extends "layout.html" %}
+
+{% block content %}
+<h1>Servicios Sonoros Musicales</h1>
+<p>Para trabajos virtuales y presenciales</p>
+
+<div class="news-cards">
+    <div>
+        <img src="{{ url_for('static', filename='img/Sesionista.jpg') }}" alt"">
+        <h3>Sesionista</h3>
+        <p>Para producciones en estudio (Virtual como Presencial) o en vivo.</p>
+        <a href="{{url_for('sesionista') }}">Averiguá de que instrumentos soy sesionista!!!<i class="fas fa-angle-double-right"></i></a>
+    </div>
+    <div>
+        <img src="{{ url_for('static', filename='img/TrabajosVarios.png') }}" alt"">
+        <h3>Trabajos Varios</h3>
+        <p>Tengo un amplio abanico de trabajos varios que hago</p>
+        <a href="{{url_for('trabajosvarios') }}">Enterate de la larga lista de Trabajos Varios que ofrezco!!!<i class="fas fa-angle-double-right"></i></a>
+    </div>
+    <div>
+        <img src="{{ url_for('static', filename='img/SonidoEnEstudio.png') }}" alt"">
+        <h3>Sonido en Estudio</h3>
+        <p>Grabación, edición, Mezcla y Mastering de producciones de estudio</p>
+        <a href="{{url_for('sonidoenestudio') }}">Más información y equipamiento!!!<i class="fas fa-angle-double-right"></i></a>
+    </div>
+    <div>
+        <img src="{{ url_for('static', filename='img/SonidoEnVivo.jpg') }}" alt ="Img Sonido en Vivo">
+        <h3>Sonido en Vivo</h3>
+        <p>Para eventos de hasta 150 personas y agrupaciones musicales pequeñas</p>
+        <a href="{{url_for('sonidoenvivo') }}">Más Información y equipamiento!!<i class="fas fa-angle-double-right"></i></a>
+    </div>
+    <div>
+        <img src="{{ url_for('static', filename='img/AfinaciónPianos.jpg') }}" alt="Img Afinación Pianos">
+        <h3>Afinación de pianos</h3>
+        <p>Puedo afinar tu piano acústico y hacerle una limpieza por dentro</p>
+        <a href="{{url_for('afinacionpianos') }}">Contactame!!<i class="fas fa-angle-double-right"></i></a>
+    </div>
+</div>
+
+<p class="aclaracionizq">Podes pedir presupuesto sin compromiso y sin cargo! Y Podés pedir varias cosas y armo un presupuesto especial!</p>
+
+
+{% endblock %}

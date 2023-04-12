@@ -1,0 +1,43 @@
+{% extends "layout.html" %}
+
+{% block content %}
+<h1>Mis Proyectos</h1>
+
+<p class="textocomun">Escuchanos y Contratanos para Tu Evento</p>
+
+<div class="news-cards">
+    <div>
+        <img src="" alt="Auge">
+        <h3>Auge</h3>
+        <p>Banda de Rock Alternativo</p>
+        <a href="{{url_for('auge') }}">Conocenos!!<i class="fas fa-angle-double-right"></i></a>
+    </div>
+    <div>
+        <img src="" alt="Guibaj">
+        <h3>Guibaj</h3>
+        <p>Banda de Rock Alternativo</p>
+        <a href="{{url_for('guibaj') }}">Conocenos!!<i class="fas fa-angle-double-right"></i></a>
+    </div>
+    <div>
+        <img src="" alt="Grahvitty">
+        <h3>Grahvitty</h3>
+        <p>Banda de Rock Alternativo</p>
+        <a href="{{url_for('grahvitty') }}">Conocenos!!<i class="fas fa-angle-double-right"></i></a>
+    </div>
+    <div>
+        <img src="" alt ="7thRoad">
+        <h3>7th Road</h3>
+        <p>Banda de Rock Alternativo</p>
+        <a href="{{url_for('seventhroad') }}">Conocenos!!<i class="fas fa-angle-double-right"></i></a>
+    </div>
+    <div>
+        <img src="" alt="CDLC">
+        <h3>Cuarteto de la Cabeza</h3>
+        <p>Cuarteto de cuerdas tradicional instrumental</p>
+        <a href="{{url_for('cuartetodelacabeza') }}">Conocenos!!<i class="fas fa-angle-double-right"></i></a>
+    </div>
+</div>
+
+<p class="textocomun">Actualmente la seccción se encuentra en desarrollo.</p>
+
+{% endblock %}

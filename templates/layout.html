@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Julián Theler WEB</title>
+    <!-- FONT AWESOME-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
+    <!-- FONT OSWALD-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400&display=swap" rel="stylesheet">
+    <!-- Custom CSS-->
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/main.css') }}">
+    <style>
+        .showcase {
+            background: url("{{ url_for('static', filename='img/Noticias.png') }}") no-repeat center center/cover;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="menu-btn">
+        <i class="fas fa-bars">
+        </i>
+    </div>
+
+    <div class="container">
+        <nav class="nav-main">
+            <a href="/"><img src="{{ url_for('static', filename='img/Logo.jpg') }}" alt="Julián Theler LOGO" class="nav-brand"> Julián Theler Website</a>
+            <ul class="nav-menu">
+                <li>
+                    <a href="{{url_for('home') }}">Inicio</a>
+                </li>
+                <li>
+                    <a href="{{url_for('about') }}">Sobre Mi</a>
+                </li>
+                <li>
+                    <a href="{{url_for('misproyectos') }}">Mis Proyectos</a>
+                    <ul>
+                        <li><a href="{{url_for('cuartetodelacabeza') }}">Cuarteto de la Cabeza</a></li>
+                        <li><a href="{{url_for('auge') }}">Auge</a></li>
+                        <li><a href="{{url_for('guibaj') }}">Guibaj</a></li>
+                        <li><a href="{{url_for('grahvitty') }}">Grahvitty</a></li>
+                        <li><a href="{{url_for('seventhroad') }}">7th Road</a></li>
+                        <li><a href="{{url_for('seccionendesarrollo') }}">(Sección en Desarrollo)</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="{{url_for('serviciossonorosmusicales') }}">Servicios Sonoros Musicales</a>
+                    <ul>
+                        <li><a href="{{url_for('sesionista') }}">Sesionista</a></li>
+                        <li><a href="{{url_for('trabajosvarios') }}">Trabajos Varios</a></li>
+                        <li><a href="{{url_for('sonidoenestudio') }}">Sonido en Estudio</a></li>
+                        <li><a href="{{url_for('sonidoenvivo') }}">Sonido en Vivo</a></li>
+                        <li><a href="{{url_for('afinacionpianos') }}">Afinación Pianos</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="{{url_for('trabajosrealizados') }}">Trabajos Realizados</a>
+                </li>
+                <li>
+                    <a href="{{url_for('fechasafuturo') }}">Fechas A Futuro</a>
+                </li>
+            </ul>
+        </nav>
+
+        <div class="alternativa">
+            <a href="/"><img src="{{ url_for('static', filename='img/Logo.jpg') }}" alt="Julián Theler LOGO" class="nav-brand"> Julián Theler Website</a>
+            <div class="footer-container">
+                <ul>
+                    <li>
+                        <a href="{{url_for('about') }}">
+                            <h3>Sobre Mi</h3>
+                        </a>
+                    </li>
+
+                </ul>
+                <ul>
+                    <li>
+                        <a href="{{url_for('misproyectos') }}">
+                            <h3>Mis Proyectos</h3>
+                        </a>
+                    </li>
+                </ul>
+                <ul>
+                    <li>
+                        <a href="{{url_for('serviciossonorosmusicales') }}">
+                            <h3>Servicios Sonoros Musicales</h3>
+                        </a>
+                    </li>
+                </ul>
+                <ul>
+                    <li>
+                        <a href="{{url_for('trabajosrealizados') }}">
+                            <h3>Trabajos Realizados</h3>
+                        </a>
+                    </li>
+                </ul>
+                <ul>
+                    <li>
+                        <a href="{{url_for('fechasafuturo') }}">
+                            <h3>Fechas A Futuro</h3>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <hr>
+
+        <div class="container p-4">
+            {% block content %}
+            {% endblock %}
+        </div>
+
+
+
+        <!--REDES SOCIALES-->
+        <section class="social">
+            <p>Seguime en las redes</p>
+            <a href="https://linktr.ee/juliantheler" class="linktreee" target="_blank">Linktree</a>
+            <div class="links">
+                <ul>
+                    <li>
+                        <a href="https://www.facebook.com/julian.theler" target="_blank">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                    </li>
+                </ul>
+                <ul>
+                    <li>
+                        <a href="https://www.youtube.com/@JULIANNTHELER/featured" target="_blank">
+                            <i class="fab fa-youtube"></i>
+                        </a>
+                    </li>
+                </ul>
+                <ul>
+                    <li>
+                        <a href="https://www.linkedin.com/in/julian-theler/" target="_blank">
+                            <i class="fab fa-linkedin"></i>
+                        </a>
+                    </li>
+                </ul>
+                <ul>
+                    <li>
+                        <a href="https://www.instagram.com/juliantheler/" target="_blank">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </section>
+
+    </div>
+
+    <div class="footer-links">
+
+    </div>
+
+    <footer class="footer">
+        <h3>Desarrollado por: Julián Theler (Todos los derechos Reservados)</h3>
+    </footer>
+
+    <!--SCROLL REVEAL-->
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <!--Custom JS-->
+    <script src="{{ url_for('static', filename='js/main.js') }}"></script>
+
+</body>
+
+</html>
